@@ -1,4 +1,4 @@
-# Projeto-3
+# "qtsupervisory"
 Projeto para avaliação da 3ª unidade de programação avançada
 ## Projeto TcpProducer
 Este projeto é sobre um produtor de dados para um servidor, possui 7 classes que serão usadas como slot  no Qt e uma função. O usuário deve digitar o IP da maquina que quer se conectar e desconectar,escolher a faixa de valores dos dados,iniciar e parar a transmissão e o tempo de envio de dados 
