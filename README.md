@@ -33,3 +33,17 @@ Esta função é do Qt, é um temporizador, nela é chamada a função start() e
 2. **minimo**: variavel privada inteira para receber o valor minimo da faixa 
 3. **timing**: variavel privada inteira para receber o valor do tempo escolhido pelo usuário
 4. **timerID**: variavel globar inteira que receber o identificador do temporizador
+## Projeto TcpConsumer
+Este projeto é sobre um consumidor de dados que recebe os dados produzidos no servidor indicado e mostra um gráfico com esses dados.
+Contém 5 public slots, e 2 funções.
+### Public Slots
+1. **void Item(QListWidgetItem *item)**: recebe o texto do listwidget.
+2. **void getData()**: aciona o get no servidor e recebe os dados.
+3. **void tcpConnect():** conecta ao IP do servidor indicado pelo usuário.
+4. **void tcpDisconnect():** desconecta o IP.
+5. **void upgrade():** atualiza a lista dos IPs.
+### Public Functions:
+1. **void timeStamp():** converte de Milisegundos Epoch para inteiro.
+2. **void listData():** Aciona o list no servidor.
+
+   
