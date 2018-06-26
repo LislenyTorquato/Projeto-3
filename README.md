@@ -37,13 +37,15 @@ Esta função é do Qt, é um temporizador, nela é chamada a função start() e
 Este projeto é sobre um consumidor de dados que recebe os dados produzidos no servidor indicado e mostra um gráfico com esses dados.
 Contém 5 public slots, e 2 funções.
 ### Public Slots
-1. **void Item(QListWidgetItem *item)**: recebe o texto do listwidget.
-2. **void getData()**: aciona o get no servidor e recebe os dados.
-3. **void tcpConnect():** conecta ao IP do servidor indicado pelo usuário.
-4. **void tcpDisconnect():** desconecta o IP.
+1. **void Item(QListWidgetItem *item)**: recebe o texto do listwidget;
+2. **void getData()**: aciona o get no servidor e recebe os dados;
+3. **void tcpConnect():** conecta ao IP do servidor indicado pelo usuário;
+4. **void tcpDisconnect():** desconecta o IP;
 5. **void upgrade():** atualiza a lista dos IPs.
 ### Public Functions:
-1. **void timeStamp():** converte de Milisegundos Epoch para inteiro.
+1. **void timeStamp():** converte de Milisegundos Epoch para inteiro;
 2. **void listData():** Aciona o list no servidor.
-
-   
+### Variáveis
+1. **std::vector <qint64> tempo**:vetor do tipo qint64 para receber o tempo em Milisegundos Epoch;
+2. **std::vector <int> valores**: vetor para receber os valores inteiros;
+3. **QString itemDaLista**: recebe o texto do listWidget.
