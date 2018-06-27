@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
   connect(ui->pushButtonDisconect,
           SIGNAL(clicked(bool)),
           this,
-          SLOT(tcpDisconect()));
+          SLOT(tcpDisconnect()));
   connect(ui->horizontalSliderMin,
           SIGNAL(valueChanged(int)),
                  this,
@@ -27,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent) :
   connect (ui->horizontalSliderMax,
            SIGNAL(valueChanged(int)),
                   this,
-                  SLOT (setMaximo()));
+                  SLOT (setMaximo(int)));
   connect (ui->horizontalSliderTiming,
            SIGNAL(valueChanged(int)),
            this,
@@ -93,10 +93,11 @@ void MainWindow::start(){
             //retorna um string com o tempo e o numero da faixa de valores
 
     ui->listWidget->addItem(str);//add na lista
-
+    //qDebug() << str;
+          qDebug() << socket->write(str.toStdString().c_str()) << " bytes written";
       if(socket->waitForBytesWritten(3000)){
-        //qDebug() << "wrote";
-       ui->listWidget->addItem("wrote");
+        qDebug() << "wrote";
+
       }
 
   }
