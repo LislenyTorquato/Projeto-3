@@ -63,7 +63,7 @@
      <string>Disconnect</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="listWidgetDeIPs">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -86,7 +86,7 @@
      <string>Update</string>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QSlider" name="horizontalSliderTime">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -141,16 +141,6 @@
      <string>IP do Servidor</string>
     </property>
    </widget>
-   <widget class="QWidget" name="widget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>219</x>
-      <y>9</y>
-      <width>231</width>
-      <height>241</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButtonStart">
     <property name="geometry">
      <rect>
@@ -177,6 +167,16 @@
      <string>Stop</string>
     </property>
    </widget>
+   <widget class="Plotter" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>211</width>
+      <height>221</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -199,6 +199,31 @@
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Plotter</class>
+   <extends>QWidget</extends>
+   <header>plotter.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>horizontalSliderTime</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_2</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>159</x>
+     <y>299</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
